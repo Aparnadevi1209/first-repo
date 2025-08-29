@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>DevOps Life Cycle (SVG)</title>
+<style>
+  body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: #f7f7f7;
+  }
+
+  .diagram {
+    width: 90vw;
+    max-width: 1000px;
+    height: auto;
+  }
+
+  text {
+    font-size: 14px;
+    font-weight: 600;
+    fill: #111;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    pointer-events: none;
+  }
+
+  .step {
+    fill: #fff;
+    stroke: #111;
+    stroke-width: 2;
+  }
+
+  .center {
+    fill: #f6cfd0; /* soft pink */
+    stroke: #e8aeb0;
+    stroke-width: 2;
+  }
+
+  /* arrowhead marker style */
+  marker#arrow {
+    overflow: visible;
+  }
+</style>
+</head>
+<body>
+
+<!-- SVG diagram -->
+<svg class="diagram" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" aria-label="DevOps lifecycle diagram">
+
+  <!-- defs: arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L12,6 L0,12 L3,6 z" fill="#111"/>
+    </marker>
+  </defs>
+
+  <!-- central label -->
+  <circle cx="400" cy="300" r="70" class="center"/>
+  <text x="400" y="300" style="font-size:18px; font-weight:700;">
+    life cycle of
+  </text>
+  <text x="400" y="320" style="font-size:20px; font-weight:800;">
+    DevOps
+  </text>
+
+  <!-- step positions (arranged on a circle) -->
+  <!-- Plan (top) -->
+  <g transform="translate(400,100)">
+    <circle class="step" r="34" />
+    <text>Plan</text>
+  </g>
+
+  <!-- Develop (top-right) -->
+  <g transform="translate(541,159)">
+    <circle class="step" r="34" />
+    <text>Develop</text>
+  </g>
+
+  <!-- Build (right) -->
+  <g transform="translate(600,300)">
+    <circle class="step" r="34" />
+    <text>Build</text>
+  </g>
+
+  <!-- Test (bottom-right) -->
+  <g transform="translate(541,441)">
+    <circle class="step" r="34" />
+    <text>Test</text>
+  </g>
+
+  <!-- Release (bottom) -->
+  <g transform="translate(400,500)">
+    <circle class="step" r="34" />
+    <text>Release</text>
+  </g>
+
+  <!-- Deploy (bottom-left) -->
+  <g transform="translate(259,441)">
+    <circle class="step" r="34" />
+    <text>Deploy</text>
+  </g>
+
+  <!-- Operate (left) -->
+  <g transform="translate(200,300)">
+    <circle class="step" r="34" />
+    <text>Operate</text>
+  </g>
+
+  <!-- Monitor (top-left) -->
+  <g transform="translate(259,159)">
+    <circle class="step" r="34" />
+    <text>Monitor</text>
+  </g>
+
+  <!-- Curved connecting arrows (paths) -->
+  <!-- Plan -> Develop -->
+  <path d="M400,134 Q470,120 520,155" fill="none" stroke="#111" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Develop -> Build -->
+  <path d="M520,188 Q560,230 580,270" fill="none" stroke="#111" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Build -> Test -->
+  <path d="M580,330 Q560,360 540,390" fill="none" stroke="#111" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Test -> Release -->
+  <path d="M518,432 Q470,464 435,486" fill="none" stroke="#111" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Release -> Deploy -->
+  <path d="M365,486 Q330,470 295,444" fill="none" stroke="#111" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Deploy -> Operate -->
+  <path d="M280,426 Q240,375 220,330" fill="none" stroke="#111" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Operate -> Monitor -->
+  <path d="M220,270 Q240,220 280,180" fill="none" stroke="#111" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Monitor -> Plan -->
+  <path d="M310,146 Q345,120 385,124" fill="none" stroke="#111" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- extra decorative arrowheads near some steps to mimic original style -->
+  <!-- small triangular arrows between circles (optional) -->
+  <path d="M430,112 L444,95 L452,112 Z" fill="#fff" stroke="#111" stroke-width="2"/>
+
+</svg>
+
+</body>
+</html>
