@@ -1,0 +1,31 @@
+Name: Aparna devi, Nissy ,Sunnitha ,Amani,Ashrita
+course: BCA Data science
+ DevOps, DevOps Lifecycle, GitHub, and Diagrams.net 
+1. DevOps Introduction  
+What is DevOps? 
+DevOps = Development + Operations 
+It's a culture + set of practices + tools that help: 
+      • Developers (who write code) 
+      • Operations (who deploy/manage systems) 
+Work together, instead of working in silos. 
+Real-Time Example: 
+Imagine you're building a mobile app like Swiggy. 
+        • The developer writes code to add "Track My Order" feature. 
+        • Without DevOps: Developer gives code to Ops team → they manually 
+deploy → bugs happen → delays. 
+        • With DevOps: Code is automatically tested and deployed → customers 
+get updates faster and safely. 
+DevOps Helps You: 
+        • Release features faster (like adding new payment methods in Zomato) 
+        • Fix bugs quickly (like fixing login issue in IRCTC) 
+       • Automate repetitive tasks (like server restarts, database backups) 
+2. DevOps Lifecycle  
+The 8 Phases of DevOps Lifecycle: 
+ Plan
+Code
+Build
+Test
+Release
+Deploy
+Operate
+Monitor
